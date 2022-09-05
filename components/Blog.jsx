@@ -51,8 +51,8 @@ const Blog = () => {
         </div>
 
         <div className="flex flex-wrap">
-          {arrImage.map((item) => (
-            <Card image={item} />
+          {arrImage.map((item, idx) => (
+            <Card image={item} key={idx} />
           ))}
         </div>
       </div>
