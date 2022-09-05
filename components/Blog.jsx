@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import arrImage from "../assets";
 
-const Card = () => (
+const Card = ({ image }) => (
   <div className="w-full px-4 md:w-1/2 xl:w-1/3 ">
     <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10 ">
       <Image
-        src={`https://source.unsplash.com/360x200?fantasy`}
+        src={image}
         className=" "
         alt="programming"
         height={200}
@@ -50,9 +51,9 @@ const Blog = () => {
         </div>
 
         <div className="flex flex-wrap">
-          <Card />
-          <Card />
-          <Card />
+          {arrImage.map((item) => (
+            <Card image={item} />
+          ))}
         </div>
       </div>
     </section>
