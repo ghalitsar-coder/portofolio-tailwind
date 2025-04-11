@@ -65,7 +65,7 @@ const Footer = () => {
                 </a>
               </Link>
             </span>{" "}
-            &copy; Copyright 2022
+            &copy; Copyright 2025
           </p>
         </div>
       </div>
