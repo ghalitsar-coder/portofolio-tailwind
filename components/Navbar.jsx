@@ -23,16 +23,16 @@ const Navbar = () => {
     {
       name: "About",
     },
+    // {
+    //   name: "Project",
+    // },
     {
       name: "Project",
     },
-
     {
       name: "Clients",
     },
-    {
-      name: "Blog",
-    },
+
     {
       name: "Contact",
     },

@@ -1,24 +1,33 @@
 import Image from "next/image";
 import React from "react";
 import bank from "../assets/bank-app.png";
+import arrImage from "../assets";
+import Link from "next/link";
 
-const Card = () => (
-  <div className="mb-14 p-4 md:w-1/2">
-    <div className="rounded-md shadow-md overflow-hidden">
+const Card = ({ image }) => (
+  <div className="w-full px-4 md:w-1/2 xl:w-1/3 ">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10 ">
       <Image
-        unoptimized
-        src={bank}
-        className="object-cover w-full h-full"
-        alt="project"
+        src={image}
+        className=" "
+        alt="programming"
+        height={200}
+        width={360}
+        layout="responsive"
       />
+      <div className="py-8 px-6">
+        <h3 className="truncate hover:text-gradient text-dark font-semibold text-xl mb-1 ">
+          The Lord of the Rings
+        </h3>
+        <p className="font-medium text-base text-secondary mb-5">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
+          nesciunt.{" "}
+        </p>
+        <button className="bg-gradient text-white py-2 px-4 rounded-md">
+          <Link href="#">Read More</Link>
+        </button>
+      </div>
     </div>
-    <h3 className="font-semibold text-xl text-dark mt-5">
-      Landing Page Bank App
-    </h3>
-    <p className="font-medium text-sm text-secondary">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias nam
-      adipisci et nulla doloribus?
-    </p>
   </div>
 );
 
@@ -42,11 +51,10 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className="w-full px-4 flex flex-wrap justify-center ">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="flex flex-wrap">
+          {arrImage.map((item, idx) => (
+            <Card image={item} key={idx} />
+          ))}
         </div>
       </div>
     </section>

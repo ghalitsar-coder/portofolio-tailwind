@@ -20,9 +20,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Skills />
-      <Clients />
       <Blog />
+      {/* <Skills /> */}
+      <Clients />
       <Contact />
       <Footer />
     </div>
